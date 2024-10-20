@@ -29,9 +29,10 @@ def copyfi(orindic_path,copydic_path):
             if part_name in filename:
                 matching_file = filename
                 break
-        orig_flie_path = f'{orindic_path}/{matching_file}'
-        new_flie_path = f'{copydic_path}/2024-2025-1-{which_type}/{st_code}-{name}-{which_type}.docx'
-        shutil.copy(orig_flie_path, new_flie_path)
+        if matching_file!=[]:
+            orig_flie_path = f'{orindic_path}/{matching_file}'
+            new_flie_path = f'{copydic_path}/2024-2025-1-{which_type}/{st_code}-{name}-{which_type}.docx'
+            shutil.copy(orig_flie_path, new_flie_path)
         # 目前测试成功
 
 
